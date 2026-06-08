@@ -93,29 +93,30 @@
       color: inherit;
     }
 
-    .brand-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: var(--gradient);
-      display: grid;
-      place-items: center;
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: var(--bg);
-      letter-spacing: -0.02em;
+    .brand-logo-shell {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.55rem 1rem;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+      line-height: 0;
       flex-shrink: 0;
+      transition: box-shadow 0.2s, transform 0.2s;
     }
 
-    .brand-text {
-      font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: -0.01em;
+    .brand:hover .brand-logo-shell {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.34);
+      transform: translateY(-1px);
     }
 
-    .brand-text span {
-      color: var(--text-muted);
-      font-weight: 400;
+    .brand-logo {
+      display: block;
+      height: 30px;
+      width: auto;
+      max-width: min(220px, 52vw);
+      object-fit: contain;
     }
 
     .header-link {
@@ -315,6 +316,14 @@
       .video-card-header {
         padding: 1rem 1.15rem;
       }
+
+      .brand-logo-shell {
+        padding: 0.45rem 0.8rem;
+      }
+
+      .brand-logo {
+        height: 24px;
+      }
     }
   </style>
 </head>
@@ -325,8 +334,16 @@
   <div class="page">
     <header>
       <a class="brand" href="https://thethinkerslab.com" target="_blank" rel="noopener noreferrer">
-        <div class="brand-mark" aria-hidden="true">TTL</div>
-        <div class="brand-text">The Thinkers Lab <span>/ Demos</span></div>
+        <span class="brand-logo-shell">
+          <img
+            class="brand-logo"
+            src="https://thethinkerslab.com/assets/imgs/logo/logo-2.png"
+            alt="The Thinkers Lab"
+            width="1344"
+            height="437"
+            fetchpriority="high"
+          />
+        </span>
       </a>
       <a class="header-link" href="https://thethinkerslab.com" target="_blank" rel="noopener noreferrer">
         Visit our website
@@ -350,7 +367,7 @@
         <div class="video-card-header">
           <div class="video-number" aria-hidden="true">01</div>
           <div class="video-title-group">
-            <h2>Demo 1</h2>
+            <h2>Aalayam One: Version 1</h2>
             <p>Product demonstration — Part 1</p>
           </div>
         </div>
@@ -366,7 +383,7 @@
         <div class="video-card-header">
           <div class="video-number" aria-hidden="true">02</div>
           <div class="video-title-group">
-            <h2>Demo 2</h2>
+            <h2>Aalayam One: Version 2</h2>
             <p>Product demonstration — Part 2</p>
           </div>
         </div>
@@ -382,7 +399,7 @@
         <div class="video-card-header">
           <div class="video-number" aria-hidden="true">03</div>
           <div class="video-title-group">
-            <h2>Demo 3</h2>
+            <h2>Aalayam One: Version 3</h2>
             <p>Product demonstration — Part 3</p>
           </div>
         </div>
